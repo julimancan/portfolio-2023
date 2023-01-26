@@ -1,0 +1,294 @@
+{
+  "hero": {
+    "image": {
+      "url": "/juli-without-background.png",
+      "alt": "Juli"
+    },
+    "title": "Web Developer with a passion for creating innovative solutions",
+    "saludos": [
+      "Hola!",
+      "Hello!",
+      "Bonjour!",
+      "Ciao!",
+      "Hallo!",
+      "Olá!",
+      "你好!",
+      "こんにちは!",
+      "नमस्ते!",
+      "Здравствуйте!",
+      "Привет!",
+      "مرحبا!"
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Web Developer with a diverse background in entrepreneurship, consulting, and media production. Strong ability to create innovative solutions in a fast-paced environment. Proven track record of honesty, teamwork, and hard work. Passionate about technology, the internet, and continuously learning new skills, including experience with Next.js, Nuxt.js, Vue.js, and Docker. In my free time, I enjoy fostering dogs, creating content with my musician partner, and playing soccer.",
+    "hard_skills": [
+      "NextJS",
+      "React",
+      "Auth0",
+      "PostgreSQL",
+      "AWS Rekognition",
+      "Sanity CMS",
+      "NextJS",
+      "Sanity",
+      "CSS",
+      "HTML",
+      "NodeJS",
+      "Express",
+      "SCSS",
+      "Stripe API"
+    ],
+    "soft_skills": [
+      "Team leadership",
+      "Project management",
+      "Front-end development",
+      "Database design and implementation",
+      "Communication",
+      "Collaboration",
+      "Problem solving",
+      "Adaptability"
+    ]
+  },
+  "projects": {
+    "title": "My Work",
+    "list": [
+      {
+        "name": "It's My Wine",
+        "description": "Led a team of 3 developers in the development and implementation of a full-stack web application that enables users to create personalized wine labels. Created an e-commerce platform and a label customizer feature. Contributed to the design of the initial wireframe and actively participated in the front-end and back-end development through peer programming.",
+        "technologies": [
+          "React",
+          "Konva",
+          "e-commerce platform",
+          "Paypal API",
+          "Nodejs",
+          "Express",
+          "Nodemailer",
+          "SCSS",
+          "BulmaCSS",
+          "Stripe"
+        ],
+        "teamSize": 3,
+        "responsibilities": [
+          "Lead the team",
+          "Contributed to the design of the initial wireframe",
+          "Participated in front-end and back-end development"
+        ],
+        "liveLink": "https://itsmywine.netlify.app/",
+        "githubLinks": [
+          "https://github.com/maple-tree-js/winery-fe",
+          "https://github.com/maple-tree-js/winery-be"
+        ],
+        "screenshots": [
+          "/projects/its-my-wine/homepage-desktop.png",
+          "/projects/its-my-wine/label-editor-desktop.png"
+        ],
+        "slug": "/projects/its-my-wine"
+      },
+      {
+        "name": "ReForest App",
+        "description": "As part of my graduation project for the Lighthouse Labs Web Development bootcamp, I led a team of 3 developers to design and build an eco-friendly waste management web application. Utilizing the AWS Rekognition service, the app allows users to identify waste by capturing photographs. The project was built using a combination of React, Auth0, and PostgreSQL on the backend. I was responsible for the front-end design, implementation of features, and development of the database, including a gamified version to engage users and provide a space for them to compare progress with friends.",
+        "technologies": [
+          "React",
+          "Nodejs",
+          "Express",
+          "PostgreSQL",
+          "AWS Rekognition",
+          "Material UI",
+          "React Testing Library",
+          "Jest",
+          "Cypress",
+          "Styled Components",
+          "Axios"
+        ],
+        "teamSize": 3,
+        "responsibilities": [
+          "Overseeing project's development",
+          "Contributed to the design of the initial wireframe",
+          "Participated in front-end and back-end development",
+          "Design of the gamified version of the app to engage and provide a space to compare progress with friends"
+        ],
+        "githubLinks": [
+          "https://github.com/maple-tree-js/winery-fe",
+          "https://github.com/maple-tree-js/winery-be"
+        ],
+        "screenshots": [
+          "https://github.com/lib3rate/which-bin-app/raw/master/public/images/ReadME/Euni.gif"
+        ],
+        "slug": "/projects/reforest"
+      },
+      {
+        "name": "Los Tragicos del Swing",
+        "description": "As the lead of a cross-functional team, I oversaw the creation and implementation of a website for a non-profit organization using the Sanity CMS system for content management. The website was designed to showcase the organization's ongoing projects and creative initiatives, and provide a platform for them to communicate with their audience. I worked closely with a team of designers and developers to ensure the website had a visually appealing design, an easy-to-use user interface and was optimized for search engines. In addition, I also managed the project timelines, ensuring that the project was delivered on time and within budget. The website was a great success, helping the organization to increase awareness of their projects and initiatives, and attract more support and donations.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Sanity CMS",
+          "SCSS",
+          "Styled Components",
+          "SendGrid",
+          "Groq",
+          "Figma",
+          "CSS Animations"
+        ],
+        "teamSize": 3,
+        "responsibilities": [
+          "Leading a cross-functional team of designers and developers in the creation and implementation of a website for a non-profit organization.",
+          "Overseeing, and developing the use of the Sanity CMS system for content management.",
+          "Ensuring the website had a visually appealing design, an easy-to-use user interface and was optimized for search engines.",
+          "Managing the project timelines, ensuring that the project was delivered on time and within budget.",
+          "Communicating with the non-profit organization to ensure the website met their needs and goals.",
+          "Ensuring that the website was successful in increasing awareness of the organization's projects and initiatives, and attracting more support and donations.",
+          "Collaborating with the team to ensure all the features were implemented and tested.",
+          "Being the point of contact with the client, and attending meetings and calls with them.",
+          "Making sure the website is accessible, responsive and compatible with different browsers."
+        ],
+        "liveLink": "https://lostragicoscollective.ca/",
+        "githubLinks": ["https://github.com/skyllstudio/los-tragicos-web-app"],
+        "screenshots": ["/projects/los-tragicos/homepage-desktop.png"],
+        "slug": "/projects/los-tragicos"
+      },
+      {
+        "name": "Howley Sounds",
+        "description": "NextJS web application for a music producer based in Toronto, featuring a headless Content Management System (CMS) that allows for easy updates and management of content. I implemented various features such as a Music Player with the ability to update and reorder songs directly from the CMS, Hover Boxes that can be updated and reordered, and a Contact form integrated with the Sendgrid API for easy communication with visitors. The application was designed to provide a seamless user experience and easy access to the features, and was optimized for search engines, catering to the needs of the music producer, and providing a platform to showcase their work and connect with their audience.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Sanity CMS",
+          "SCSS",
+          "Styled Components",
+          "Groq",
+          "SendGrid"
+        ],
+        "teamSize": 1,
+        "responsibilities": [
+          "Designing and creating a Front-End NextJS web application for a music producer based in Toronto.",
+          "Implementing a headless Content Management System (CMS) for easy updates and management of content.",
+          "Implementing a Music Player with the ability to update and reorder songs directly from the CMS.",
+          "Implementing a Contact form integrated with the Sendgrid API for easy communication with visitors.",
+          "Ensuring the application provides a seamless user experience and easy access to the features.",
+          "Optimizing the application for search engines.",
+          "Being the point of contact with the client, and attending meetings and calls with them.",
+          "Making sure the website is accessible, responsive and compatible with different browsers."
+        ],
+        "liveLink": "https://howleysounds.com/",
+        "githubLinks": ["https://github.com/julimancan/howleysounds-next"],
+        "screenshots": ["/projects/howley-sounds/homepage-desktop.png"],
+        "slug": "/projects/howley-sounds"
+      },
+      {
+        "name": "Eunice Keitan",
+        "description": "NextJS web application featuring a headless Content Management System (CMS) that allows for easy updates and management of content. The application was designed with a responsive layout to provide optimal viewing experience on different devices. I implemented various features such as a Music Player that retrieves artists' music from SoundCloud, a Donations button integrated with the PayPal API, a Video player connected to a dynamic Youtube Playlist that automatically updates with new videos, an Electronic Press Kit (EPK) page and a Videos section that allows users to easily access artist's videos. The application was designed to provide a seamless user experience and easy access to the features.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Sanity CMS",
+          "SCSS",
+          "Styled Components",
+          "Groq"
+        ],
+        "teamSize": 1,
+        "responsibilities": [
+          "Designing and creating a Front-End NextJS web application featuring a headless Content Management System (CMS).",
+          "Implementing a responsive design for optimal viewing experience on different devices.",
+          "Implementing a Music Player that retrieves artists' music from SoundCloud.",
+          "Implementing a Donations button integrated with the PayPal API.",
+          "Implementing a Video player connected to a dynamic Youtube Playlist that automatically updates with new videos.",
+          "Ensuring the application provides a seamless user experience and easy access to the features.",
+          "Being the point of contact with the client, and attending meetings and calls with them.",
+          "Managing project scope and ensuring it stays within budget."
+        ],
+        "liveLink": "https://eunicekeitan.com/",
+        "githubLinks": ["https://github.com/julimancan/eunice-keitan-next-app"],
+        "screenshots": ["/projects/eunice-keitan/homepage-desktop.png"],
+        "slug": "/projects/eunice-keitan"
+      },
+      {
+        "name": "Black Jade Collective",
+        "description": "NextJS web application featuring a headless Content Management System (CMS) that allows for easy updates and management of content. The application was designed for photographers, providing them with client pages that can showcase hundreds of photos that are uploaded to Cloudinary. The application utilizes Sanity and NextJS to create individual pages for each event, displaying all images and allowing for easy download. The app also works as a portfolio for the collective, showcasing the artists' work and making it easily accessible to potential clients. The application was designed to provide a seamless user experience and easy access to the features, and was optimized for search engines.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Sanity CMS",
+          "SCSS",
+          "Styled Components",
+          "Groq",
+          "Cloudinary API"
+        ],
+        "teamSize": 1,
+        "responsibilities": [
+          "Designing and creating a NextJS web application with a headless Content Management System (CMS)",
+          "Implementing client pages for photographers to showcase hundreds of photos that are uploaded to Cloudinary",
+          "Utilizing Sanity and NextJS to create individual pages for each event, displaying all images and allowing for easy download",
+          "Implementing an app that works as a portfolio for the collective, showcasing the photographers' work and making it easily accessible to potential clients",
+          "Ensuring the application provides a seamless user experience and easy access to the features",
+          "Optimizing the application for search engines",
+          "Being the point of contact with the client, and attending meetings and calls with them",
+          "Making sure the website is accessible, responsive and compatible with different browsers"
+        ],
+        "liveLink": "https://blackjadecollective.com/",
+        "githubLinks": ["https://github.com/julimancan/Black-Jade"],
+        "screenshots": ["/projects/black-jade/homepage-desktop.png"],
+        "slug": "/projects/black-jade"
+      },
+      {
+        "name": "Rasa Vineyards",
+        "description": "As the leader and developer of a multidisciplinary team of developers and designers, I oversaw and actively participated in the creation of a web app for Rasa Vineyards to showcase their wines and the stories behind them. The app was built using NextJS and Sanity, leveraging the latest technologies to provide users with a seamless experience regardless of the device they are using and optimized for search engine performance. The app includes features such as filters and pages displaying the different vineyards and wines, an aging chart for the wines, an event list, and an option for users to sign up for events. I played a crucial role in development, engineering and implementing the front-end features, design, and implementation of the database, to give customers an immersive and engaging experience while showcasing the vineyard's products and heritage.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Sanity CMS",
+          "SCSS",
+          "Styled Components",
+          "Groq",
+          "React Query"
+        ],
+        "teamSize": 4,
+        "responsibilities": [
+          "Leading and overseeing a team of developers and designers.",
+          "Actively participating in the development of the web app.",
+          "Leverage the latest technologies to give users a seamless experience no matter what device they are using.",
+          "Optimizing the app for best search engine performance.",
+          "Developed features such as filters and pages showcasing the different vineyards as well as the different wines",
+          "Created an aging chart for the wines",
+          "Ensuring the app accurately showcases the vineyard's products and heritage.",
+          "Implementing a headless Content Management System (CMS) using Sanity."
+        ],
+        "liveLink": "https://rasavineyards.vercel.app/",
+        "githubLinks": ["https://github.com/julimancan/rasa-next"],
+        "screenshots": ["/projects/rasa/homepage-desktop.png"],
+        "slug": "/projects/rasa"
+      },
+      {
+        "name": "Eligelo",
+        "description": "As the lead developer and designer for Eligelo, a start-up based in Colombia, I oversaw the creation of a cutting-edge Next.js web application, complete with a custom-built headless Sanity CMS. The goal of the project was to provide a safer and more streamlined buying experience for cars. I worked closely with a team of developers and designers to bring the project to life, utilizing the latest technologies to create a seamless and responsive user experience. The app features a dynamic catalog of cars, which can only be updated by the company through the CMS, but buyers can contact the seller of the vehicle directly. The app also includes a search function with various tags and filters to help buyers find the perfect vehicle. Additionally, the app was designed with mobile-first in mind and is fully responsive across all devices. I was responsible for overseeing the development and design of the project to ensure it met the client's needs and exceeded their expectations.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Sanity CMS",
+          "SCSS",
+          "Styled Components",
+          "Groq",
+          "React Query"
+        ],
+        "teamSize": 4,
+        "responsibilities": [
+          "Leading a team of developers and designers in the creation of a nextjs app and sanity CMS.",
+          "Working with the Eligelo startup to understand their needs and goals for the app.",
+          "Developing the front-end and back-end of the app.",
+          "Optimizing the app for best search engine performance.",
+          "Designing the app with a mobile-first approach.",
+          "Implementing features such as a car showcase, search function, and filters.",
+          "Ensuring the app is fully responsive and user-friendly.",
+          "Coordinating with the company to ensure that only approved cars are displayed on the app.",
+          "Implementing a direct contact feature for buyers to reach out to sellers.",
+          "Ensuring the app has good SEO performance."
+        ],
+        "liveLink": "https://eligelo.vercel.app/",
+        "githubLinks": ["https://github.com/julimancan/eligelo"],
+        "screenshots": ["/projects/eligelo/homepage-desktop.png"],
+        "slug": "/projects/eligelo"
+      }
+    ]
+  }
+}
