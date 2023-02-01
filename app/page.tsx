@@ -6,12 +6,15 @@ import Projects from "./Projects";
 // import Writer from "./Writer";
 import localFont from "@next/font/local";
 import About from "./About";
-import { useEffect, useState } from "react";
 
-const jollityFont = localFont({
-  src: "./fonts/jollity.ttf",
-  display: "swap",
-});
+const reversedProjects = [...content.projects.list.reverse()];
+const techs: string[] = [];
+content.projects.list.map((project) =>
+  project.technologies.map((tech) => {
+    if (techs.includes(tech)) return;
+    techs.push(tech);
+  })
+);
 
 const astroFont = localFont({
   src: "./fonts/astro-regular.ttf",
@@ -23,45 +26,6 @@ const marchFont = localFont({
 });
 
 export default function Home() {
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0,
-  });
-
-  const [projects, setProjects] = useState([
-    ...content.projects.list.reverse(),
-  ]);
-
-  // const technologies: string[] = [];
-  const [technologies, setTechnologies] = useState<string[]>([]);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      console.log("window resized", windowSize);
-      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-    };
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, [windowSize]);
-
-  useEffect(() => {
-    let techs: string[] = [];
-    content.projects.list.map((project) =>
-      project.technologies.map((tech) => {
-        if (techs.includes(tech)) return;
-        techs.push(tech);
-      })
-
-    );
-
-    setTechnologies(techs);
-
-  }, []);
-  console.log(technologies);
   return (
     <main className="bg-black text-white h-screen w-screen snap-y overflow-y-scroll overflow-x-hidden">
       <section className="relative snap-start min-h-[50vh] max-h-[1000px] overflow-hidden w-full py-20  grid place-content-center px-5 md:px-20 z-50 gap-10">
@@ -90,11 +54,11 @@ export default function Home() {
           Let's get in touch!
         </a>
       </section>
-      <About technologies={technologies}/>
+      <About technologies={techs} />
       <Projects
-        projectList={projects}
+        projectList={reversedProjects}
         projects={content.projects}
-        windowSize={windowSize}
+        // windowSize={windowSize}
       />
     </main>
   );

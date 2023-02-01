@@ -27,10 +27,6 @@ type ProjectsProps = {
     list: Project[];
   };
   projectList: Project[];
-  windowSize: {
-    width: number;
-    height: number;
-  }
 };
 
 const astroFont = localFont({
@@ -38,7 +34,7 @@ const astroFont = localFont({
   display: "swap",
 });
 
-const Projects = ({ projects, projectList, windowSize }: ProjectsProps) => {
+const Projects = ({ projects, projectList }: ProjectsProps) => {
   const [currentItem, setCurrentItem] = useState(0);
 
   const carouselRef = useRef(null);
@@ -76,21 +72,21 @@ const Projects = ({ projects, projectList, windowSize }: ProjectsProps) => {
   // );
   const viewNextProject = () => {
     const projectList = document.getElementById("project-list");
-    console.log("view next project");
+    console.log("view next project", projectList?.clientWidth);
     
     projectList?.scrollBy({
       top: 0,
-      left: windowSize.width,
+      left: projectList?.clientWidth,
       behavior: "smooth",
     });
     setCurrentItem(currentItem + 1);
   };
   const viewPreviousProject = () => {
-    console.log("view prev project");
     const projectList = document.getElementById("project-list");
+    console.log("view prev project", projectList?.clientWidth);
     projectList?.scrollBy({
       top: 0,
-      left: -windowSize.width,
+      left: -projectList?.clientWidth,
       behavior: "smooth",
     });
     setCurrentItem(currentItem - 1);
