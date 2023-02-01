@@ -12,7 +12,7 @@ const SlugPage = ({ params }: PageProps) => {
     (project) => project.slug === `/projects/${params.slug}`
   );
   return (
-    <div className="text-black">
+    <div className="bg-black text-white">
       <h1 className="">{project?.name}</h1>
       <ul className="flex">
         {project?.screenshots.map((screenshot) => (
