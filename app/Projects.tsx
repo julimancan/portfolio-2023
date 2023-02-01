@@ -72,7 +72,7 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
   // );
   const viewNextProject = () => {
     const projectList = document.getElementById("project-list");
-    console.log("view next project", projectList?.clientWidth);
+    // console.log("view next project", projectList?.clientWidth);
     
     projectList?.scrollBy({
       top: 0,
@@ -83,7 +83,7 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
   };
   const viewPreviousProject = () => {
     const projectList = document.getElementById("project-list");
-    console.log("view prev project", projectList?.clientWidth);
+    // console.log("view prev project", projectList?.clientWidth);
     projectList?.scrollBy({
       top: 0,
       left: -projectList?.clientWidth,
