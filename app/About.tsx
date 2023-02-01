@@ -1,26 +1,38 @@
 import Image from "next/image";
 import content from "./content.json";
+import localFont from "@next/font/local";
+
+const marchFont = localFont({
+  src: "./fonts/march.otf",
+  display: "swap",
+});
 
 const About = ({ technologies }: { technologies: string[] }) => {
   return (
     <section className="snap-start grid place-content-center px-5 md:px-20 py-10 md:py-20 bg-primary text-white">
       <article className="grid place-content-center md:grid-cols-2 max-w-[1500px] gap-4">
-        <h2 className="text-center lg:hidden text-3xl font-semibold mx-auto">
+        <h2
+          className={`${marchFont.className} text-center lg:hidden text-5xl font-semibold mx-auto`}
+        >
           {content.about.title}
         </h2>
         <div className="order-last md:order-2">
-          <h2 className="hidden lg:block text-center text-3xl font-semibold mx-auto">
+          <h2
+            className={`${marchFont.className} text-center hidden lg:block text-5xl font-semibold mx-auto`}
+          >
             {content.about.title}
           </h2>
           {content.about.description.map((paragraph, index) => (
-            <p key={index} className="mt-5 text-lg">
+            <p key={index} className="mt-5">
               {paragraph}
             </p>
           ))}
-          <h3 className="text-xl font-semibold mx-auto mt-10">These are some of the technologies I've used:</h3>
-          <ul className="grid grid-cols-2">
+          <h3 className={`text-4xl font-semibold mx-auto mt-10`}>
+            These are some of the technologies I use to build:
+          </h3>
+          <ul className="md:col-span-2 grid grid-cols-2  xl:grid-cols-4">
             {technologies.map((technology, index) => (
-              <li key={index} className="mt-5 text-lg">
+              <li key={index} className="mt-5">
                 {technology}
               </li>
             ))}

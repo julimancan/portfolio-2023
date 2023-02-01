@@ -5,7 +5,7 @@ import content from "./content.json";
 
 const DescriptionWriter = () => {
   return (
-    <div className="text-3xl font-bold min-w-full text-center relative z-40">
+    <div className="text-3xl lg:text-6xl font-bold min-w-full text-center relative z-40">
       <Typewriter words={[content.hero.description]} />
     </div>
   );

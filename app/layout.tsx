@@ -21,7 +21,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={""}>
+      <body className={"bg-black"}>
         <nav className="fixed bottom-32 -right-14 text-white -rotate-90 z-[90]">
           <ul className="gap-4 text-left font-bold">
             {content.navItems.map((item) => (

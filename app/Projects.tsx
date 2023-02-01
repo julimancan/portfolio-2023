@@ -6,13 +6,13 @@ import { useEffect, useRef, useState } from "react";
 import { useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 
-interface Project {
+export interface Project {
   name: string;
   description: string;
   technologies: string[];
   teamSize: number;
   responsibilities: string[];
-  githubLinks: string[];
+  githubLinks?: string[];
   screenshots: string[];
   slug: string;
   images: {
@@ -72,8 +72,6 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
   // );
   const viewNextProject = () => {
     const projectList = document.getElementById("project-list");
-    // console.log("view next project", projectList?.clientWidth);
-    
     projectList?.scrollBy({
       top: 0,
       left: projectList?.clientWidth,
@@ -83,7 +81,6 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
   };
   const viewPreviousProject = () => {
     const projectList = document.getElementById("project-list");
-    // console.log("view prev project", projectList?.clientWidth);
     projectList?.scrollBy({
       top: 0,
       left: -projectList?.clientWidth,

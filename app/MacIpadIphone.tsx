@@ -24,7 +24,7 @@ const MacIpadIphone = ({ iPhone, iPad, mac }: MacIpadIphoneProps) => {
           />
           {/* aspect ratio 1.75 */}
           <img
-            src="projects/MacBook.png"
+            src="/projects/MacBook.png"
             alt=""
             className="absolute h-full w-full z-[15] object-cover"
           />
@@ -45,7 +45,7 @@ const MacIpadIphone = ({ iPhone, iPad, mac }: MacIpadIphoneProps) => {
           />
           {/* aspect ratio 0.72 */}
           <img
-            src="projects/iPad.png"
+            src="/projects/iPad.png"
             alt=""
             className="absolute h-full w-full z-[25] object-cover"
           />
@@ -66,7 +66,7 @@ const MacIpadIphone = ({ iPhone, iPad, mac }: MacIpadIphoneProps) => {
           />
 
           <img
-            src="projects/iPhone.png"
+            src="/projects/iPhone.png"
             alt=""
             className="absolute h-full w-full z-[35] object-cover"
           />

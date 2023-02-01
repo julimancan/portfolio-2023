@@ -124,8 +124,8 @@
           "Design of the gamified version of the app to engage and provide a space to compare progress with friends"
         ],
         "githubLinks": [
-          "https://github.com/maple-tree-js/winery-fe",
-          "https://github.com/maple-tree-js/winery-be"
+          "https://github.com/lib3rate/which-bin-app",
+          "https://github.com/lib3rate/which-bin-api"
         ],
         "screenshots": [
           "https://github.com/lib3rate/which-bin-app/raw/master/public/images/ReadME/Euni.gif"
@@ -328,7 +328,6 @@
           "Implementing a headless Content Management System (CMS) using Sanity."
         ],
         "liveLink": "https://rasavineyards.vercel.app/",
-        "githubLinks": ["https://github.com/julimancan/rasa-next"],
         "screenshots": ["/projects/rasa/homepage-desktop.png"],
         "images": {
           "desktop": "/projects/rasa/RasaBig.jpg",
