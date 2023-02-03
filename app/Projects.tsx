@@ -68,11 +68,7 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
       if (value > lastItem) setCurrentItem(projectList.length - 1);
     }
   });
-  // scrollXProgress.on("scroll", (value) => console.log("scrolled", value))
-  // scrollXProgress.on("scroll", (value) => console.log("scrolled", value))
-  // if (value < .14) setCurrentItem(0)
-  // if (value )
-  // );
+
   const viewNextProject = () => {
     const projectList = document.getElementById("project-list");
     projectList?.scrollBy({
