@@ -6,6 +6,7 @@ import Projects, { Project } from "./Projects";
 // import Writer from "./Writer";
 import localFont from "@next/font/local";
 import About from "./About";
+import Cursor from "./Cursor";
 
 const reversedProjects: Project[] = [...content.projects.list.reverse()];
 const techs: string[] = [];
@@ -32,7 +33,9 @@ const jollityFont = localFont({
 
 export default function Home() {
   return (
-    <main className={`${jollityFont.className} text-3xl bg-black text-white h-screen w-screen overflow-y-scroll overflow-x-hidden`}>
+    <main
+      className={`${jollityFont.className} text-3xl bg-black text-white h-screen w-screen overflow-y-scroll overflow-x-hidden`}
+    >
       <section className="relative min-h-[50vh] max-h-[1000px] overflow-hidden w-full py-20  grid place-content-center px-5 md:px-20 z-50 gap-10">
         <div className="h-fit w-fit min-h-full   absolute top-0 left-0">
           <div className="w-full h-full z-30 bg-red-300 absolute opacity-50 left-0 top-0"></div>
@@ -58,6 +61,7 @@ export default function Home() {
           {" "}
           Let's get in touch!
         </a>
+        <Cursor opacity={1} color="#E1AD01" hollow size={45} duration={0} />
       </section>
       <About technologies={techs} />
       <Projects

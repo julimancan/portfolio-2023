@@ -4,8 +4,7 @@ import MacIpadIphone from "./MacIpadIphone";
 import localFont from "@next/font/local";
 import { useEffect, useRef, useState } from "react";
 import { useScroll } from "framer-motion";
-import { motion } from "framer-motion";
-
+import { TbPlayerTrackNext, TbPlayerTrackPrev } from "react-icons/tb";
 export interface Project {
   name: string;
   description: string;
@@ -34,6 +33,10 @@ const astroFont = localFont({
   display: "swap",
 });
 
+const marchFont = localFont({
+  src: "./fonts/march.otf",
+  display: "swap",
+});
 const Projects = ({ projects, projectList }: ProjectsProps) => {
   const [currentItem, setCurrentItem] = useState(0);
 
@@ -43,33 +46,29 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
     // offset: ["start end", "end end"]
   });
   useEffect(() => {
-    window.addEventListener("keydown", event => {
+    window.addEventListener("keydown", (event) => {
       if (event.key === "ArrowRight") {
         viewNextProject();
       }
       if (event.key === "ArrowLeft") {
         viewPreviousProject();
       }
-    })
-    return () => window.removeEventListener("keydown", () => {})
-  }, [])
+    });
+    return () => window.removeEventListener("keydown", () => {});
+  }, []);
   scrollXProgress.onChange((value) => {
     const initialItem = 1 / projectList.length;
     const lastItem = initialItem * (projectList.length - 1);
-    
+
     for (let i = 0; i < projectList.length; i++) {
-      if (value < initialItem) setCurrentItem(0)
+      if (value < initialItem) setCurrentItem(0);
       if (value > initialItem * i && value < initialItem * (i + 1)) {
-        setCurrentItem(i)
+        setCurrentItem(i);
       }
       if (value > lastItem) setCurrentItem(projectList.length - 1);
     }
-  })
-  // scrollXProgress.on("scroll", (value) => console.log("scrolled", value))
-  // scrollXProgress.on("scroll", (value) => console.log("scrolled", value))
-    // if (value < .14) setCurrentItem(0)
-    // if (value )
-  // );
+  });
+
   const viewNextProject = () => {
     const projectList = document.getElementById("project-list");
     projectList?.scrollBy({
@@ -93,7 +92,11 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
       id="projects"
       className={`relative snap-start grid bg-black text-white no-scrollbar py-20`}
     >
-      <h2 className="text-5xl font-semibold mt-10 mx-auto">{projects.title}</h2>
+      <h2
+        className={`${marchFont.className} text-5xl font-semibold mt-10 mx-auto`}
+      >
+        {projects.title}
+      </h2>
       <ul
         id="project-list"
         ref={carouselRef}
@@ -105,7 +108,7 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
               key={project.name}
               className={`snap-start min-w-[100vw] mx-4 grid`}
             >
-              <h3 className="text-2xl font-semibold mt-10 mx-auto text-center mb-5 lg:mb-10">
+              <h3 className="text-5xl font-semibold mt-10 mx-auto text-center mb-5 lg:mb-10">
                 {project.name}
               </h3>
               <Link href={project.slug}>
@@ -121,22 +124,20 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
             </li>
           );
         })}
-        <button
+
+        <TbPlayerTrackPrev
           onClick={viewPreviousProject}
-          className={`${astroFont.className} ${
+          className={`${
             currentItem <= 0 ? "hidden" : "inline"
-          } bg-primary z-40 text-white capitalize py-2 px-4 shadow-sm  absolute top-1/2 -translate-y-1/2 left-0`}
-        >
-          previous
-        </button>
-        <button
+          } z-40 text-white text-4xl rounded-full inline absolute top-1/2 -translate-y-1/2 left-2`}
+        />
+
+        <TbPlayerTrackNext
           onClick={viewNextProject}
-          className={`${astroFont.className} ${
+          className={`${
             currentItem >= projectList.length - 1 ? "hidden" : "inline"
-          } bg-primary z-40 text-white capitalize py-2 px-4 shadow-sm inline absolute top-1/2 -translate-y-1/2 right-0`}
-        >
-          next
-        </button>
+          } z-40 text-white text-4xl rounded-full inline absolute top-1/2 -translate-y-1/2 right-1`}
+        />
       </ul>
     </section>
   );
