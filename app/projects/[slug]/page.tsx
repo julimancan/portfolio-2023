@@ -25,7 +25,7 @@ const SlugPage = ({ params }: PageProps) => {
   );
   return (
     <main
-      className={`${jollityFont.className} text-3xl overflow-x-hidden  bg-black text-white py-20 grid gap-10`}
+      className={`overflow-x-hidden  bg-black text-white py-20 grid gap-5`}
     >
       <h1 className={`text-7xl text-center ${marchFont.className} `}>
         {project?.name}
@@ -44,7 +44,7 @@ const SlugPage = ({ params }: PageProps) => {
           </li>
         ))}
       </ul> */}
-      <article className="px-10 md:px-20 grid md:gap-10 grid-cols-1 md:grid-cols-2">
+      <article className="px-10 pr-20 md:px-20 grid md:gap-10 grid-cols-1 md:grid-cols-2">
         <section>
           <h2 className={`${marchFont.className} text-5xl mt-5`}>
             Description:{" "}
