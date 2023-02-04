@@ -61,7 +61,7 @@ export default function Home() {
           {" "}
           Let's get in touch!
         </a>
-        <Cursor opacity={1} color="#E1AD01" hollow size={45} duration={0} />
+        {/* <Cursor opacity={1} color="#E1AD01" hollow size={45} duration={0} /> */}
       </section>
       <About technologies={techs} />
       <Projects
