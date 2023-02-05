@@ -129,14 +129,14 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
           onClick={viewPreviousProject}
           className={`${
             currentItem <= 0 ? "hidden" : "inline"
-          } z-40 text-white text-4xl rounded-full inline absolute top-1/2 -translate-y-1/2 left-2`}
+          } z-40 text-white hover:cursor-pointer hover:animate-pulse text-4xl rounded-full inline absolute top-1/2 -translate-y-1/2 left-2`}
         />
 
         <TbPlayerTrackNext
           onClick={viewNextProject}
           className={`${
             currentItem >= projectList.length - 1 ? "hidden" : "inline"
-          } z-40 text-white text-4xl rounded-full inline absolute top-1/2 -translate-y-1/2 right-1`}
+          } z-40 text-white hover:cursor-pointer hover:animate-pulse text-4xl rounded-full inline absolute top-1/2 -translate-y-1/2 right-1`}
         />
       </ul>
     </section>

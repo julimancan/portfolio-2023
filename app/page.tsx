@@ -7,6 +7,7 @@ import Projects, { Project } from "./Projects";
 import localFont from "@next/font/local";
 import About from "./About";
 import Cursor from "./Cursor";
+import Button from "./Button";
 
 const reversedProjects: Project[] = [...content.projects.list.reverse()];
 const techs: string[] = [];
@@ -53,14 +54,15 @@ export default function Home() {
           Julian Bustos
         </h1>
         <DescriptionWriter />
-        <a
-          className={`${astroFont.className} text-lg relative z-40 text-center bg-primary px-4 py-2 w-fit mx-auto mt-10 rounded-sm shadow-md shadow-gray-800`}
-          target={"_blank"}
-          href={`mailto:${content.email}`}
-        >
-          {" "}
-          Let's get in touch!
-        </a>
+        <Button>
+          <a
+            target={"_blank"}
+            href={`mailto:${content.email}`}
+          >
+            {" "}
+            Let's get in touch!
+          </a>
+        </Button>
         {/* <Cursor opacity={1} color="#E1AD01" hollow size={45} duration={0} /> */}
       </section>
       <About technologies={techs} />
