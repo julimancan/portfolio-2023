@@ -3,6 +3,8 @@ import MacIpadIphone from "../../MacIpadIphone";
 import content from "../../content.json";
 import localFont from "@next/font/local";
 import { useRouter } from "next/navigation";
+import { TbPlayerTrackNext, TbPlayerTrackPrev } from "react-icons/tb";
+import { useEffect } from "react";
 
 type PageProps = {
   params: {
@@ -21,11 +23,26 @@ const jollityFont = localFont({
 });
 
 const SlugPage = ({ params }: PageProps) => {
-  const { back } = useRouter();
+  const { back, push } = useRouter();
+  let currentIndex: number = 0;
+  const project = content.projects.list.find((project, index) => {
+    currentIndex = index;
+    return project.slug === `/projects/${params.slug}`;
+  });
 
-  const project = content.projects.list.find(
-    (project) => project.slug === `/projects/${params.slug}`
-  );
+  const nextIndex = currentIndex + 1;
+  const prevIndex = currentIndex - 1;
+
+  const nextProject = content.projects.list[nextIndex];
+  const prevProject = content.projects.list[prevIndex];
+
+  const viewNextProject = () => {
+    push(nextProject.slug)
+  }
+  const viewPreviousProject = () => {
+    push(prevProject.slug)
+  }
+  
   return (
     <main className={`overflow-x-hidden  bg-black text-white py-20 grid gap-5`}>
       <button
@@ -35,6 +52,18 @@ const SlugPage = ({ params }: PageProps) => {
       >
         {"<-"}
       </button>
+      {prevProject && (
+        <TbPlayerTrackPrev
+          onClick={viewPreviousProject}
+          className={`fixed z-10 -translate-y-1/2 left-2 top-1/2 text-4xl hover:cursor-pointer hover:animate-pulse`}
+        />
+      )}
+      {nextProject && (
+        <TbPlayerTrackNext
+          onClick={viewNextProject}
+          className={`fixed z-10 -translate-y-1/2 right-2 top-1/2 text-4xl hover:cursor-pointer hover:animate-pulse`}
+        />
+      )}
       <h1 className={`text-7xl text-center ${marchFont.className} `}>
         {project?.name}
       </h1>
