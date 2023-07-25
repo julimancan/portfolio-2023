@@ -23,14 +23,14 @@ export default function RootLayout({
       <head />
       <body className={"bg-black"}>
         <nav className="fixed bottom-32 -right-14 text-white -rotate-90 z-[90]">
-          <ul className="gap-4 text-left font-bold">
+          <ul className="gap-4 font-bold text-left">
             {content.navItems.map((item) => (
               <li key={item.name} className="">
                 <Link href={item.link}>{item.name}</Link>
               </li>
             ))}
             <li>
-              <a href="/Julian-Bustos-Web-Dev-Resume-Jan-2023.pdf" download>
+              <a href="/Julian-Bustos-Web-Dev-Resume-July-2023.pdf" download>
                 Resume
               </a>
             </li>
