@@ -56,6 +56,9 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
     });
     return () => window.removeEventListener("keydown", () => {});
   }, []);
+
+
+  
   scrollXProgress.onChange((value) => {
     const initialItem = 1 / projectList.length;
     const lastItem = initialItem * (projectList.length - 1);
@@ -108,7 +111,7 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
               key={project.name}
               className={`snap-start min-w-[100vw] mx-4 grid`}
             >
-              <h3 className="text-5xl font-semibold mt-10 mx-auto text-center mb-5 lg:mb-10">
+              <h3 className="mx-auto mt-10 mb-5 text-5xl font-semibold text-center lg:mb-10">
                 {project.name}
               </h3>
               <Link href={project.slug}>
@@ -118,7 +121,7 @@ const Projects = ({ projects, projectList }: ProjectsProps) => {
                   iPhone={project.images?.mobile}
                 />
               </Link>
-              <Link href={project.slug} className="text-center mt-10">
+              <Link href={project.slug} className="mt-10 text-center">
                 Learn more
               </Link>
             </li>

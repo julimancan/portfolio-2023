@@ -2,6 +2,7 @@
 import MacIpadIphone from "../../MacIpadIphone";
 import content from "../../content.json";
 import localFont from "@next/font/local";
+import { useRouter } from "next/navigation";
 
 type PageProps = {
   params: {
@@ -20,13 +21,20 @@ const jollityFont = localFont({
 });
 
 const SlugPage = ({ params }: PageProps) => {
+  const { back } = useRouter();
+
   const project = content.projects.list.find(
     (project) => project.slug === `/projects/${params.slug}`
   );
   return (
-    <main
-      className={`overflow-x-hidden  bg-black text-white py-20 grid gap-5`}
-    >
+    <main className={`overflow-x-hidden  bg-black text-white py-20 grid gap-5`}>
+      <button
+        className="fixed font-serif text-5xl font-bold top-8 left-8 hover:animate-heartBeat"
+        type="button"
+        onClick={() => back()}
+      >
+        {"<-"}
+      </button>
       <h1 className={`text-7xl text-center ${marchFont.className} `}>
         {project?.name}
       </h1>
@@ -37,40 +45,12 @@ const SlugPage = ({ params }: PageProps) => {
           iPhone={project?.images?.mobile}
         />
       </div>
-      {/* <ul className="flex">
-        {project?.screenshots.map((screenshot) => (
-          <li key={screenshot}>
-            <img src={screenshot} alt="" />
-          </li>
-        ))}
-      </ul> */}
-      <article className="px-10 pr-20 md:px-20 grid md:gap-10 grid-cols-1 md:grid-cols-2">
+      <article className="grid grid-cols-1 px-10 pr-20 md:px-20 md:gap-10 md:grid-cols-2">
         <section>
           <h2 className={`${marchFont.className} text-5xl mt-5`}>
             Description:{" "}
           </h2>
           <p className="">{project?.description}</p>
-          {project?.liveLink && (
-            <>
-              <a
-                href={project?.liveLink}
-                className="hover:text-gray-500"
-                target="_blank"
-              >
-                Click here to see it live!
-              </a>
-              <br />
-            </>
-          )}
-          {project?.githubLinks && (
-            <a
-              href={project?.githubLinks[0]}
-              className="hover:text-gray-500"
-              target="_blank"
-            >
-              Check out the code!
-            </a>
-          )}
         </section>
         <section>
           <h2 className={`${marchFont.className} text-5xl mt-5`}>
@@ -95,6 +75,24 @@ const SlugPage = ({ params }: PageProps) => {
             ))}
           </ul>
         </section>
+        {project?.liveLink && (
+          <a
+            href={project?.liveLink}
+            className="hover:text-gray-500 col-span-full"
+            target="_blank"
+          >
+            {project.liveLink}
+          </a>
+        )}
+        {project?.githubLinks && (
+          <a
+            href={project?.githubLinks[0]}
+            className="hover:text-gray-500"
+            target="_blank"
+          >
+            {project.githubLinks[0]}
+          </a>
+        )}
       </article>
     </main>
   );

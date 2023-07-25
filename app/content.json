@@ -294,7 +294,7 @@
           "Implementing a direct contact feature for buyers to reach out to sellers.",
           "Ensuring the app has good SEO performance."
         ],
-        "liveLink": "https://eligelo.vercel.app/",
+        "liveLink": "https://eligelo.co/",
         "githubLinks": ["https://github.com/julimancan/eligelo"],
         "screenshots": ["/projects/eligelo/homepage-desktop.png"],
         "images": {
@@ -327,7 +327,7 @@
           "Ensuring the app accurately showcases the vineyard's products and heritage.",
           "Implementing a headless Content Management System (CMS) using Sanity."
         ],
-        "liveLink": "https://rasavineyards.vercel.app/",
+        "liveLink": "https://rasavineyards.com/",
         "screenshots": ["/projects/rasa/homepage-desktop.png"],
         "images": {
           "desktop": "/projects/rasa/RasaBig.jpg",

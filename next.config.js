@@ -2,10 +2,11 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    scrollRestoration: true,
   },
   images: {
     domains: ["github.com"],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
